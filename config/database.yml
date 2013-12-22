@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: launcher_journal_development
   pool: 5
-  username: launcher_journal
+  username: 
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -48,7 +48,7 @@ test:
   encoding: unicode
   database: launcher_journal_test
   pool: 5
-  username: launcher_journal
+  username: 
   password:
 
 production:
@@ -56,5 +56,5 @@ production:
   encoding: unicode
   database: launcher_journal_production
   pool: 5
-  username: launcher_journal
+  username: 
   password:
