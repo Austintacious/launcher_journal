@@ -25,6 +25,10 @@ class EntriesController < ApplicationController
     end
   end
 
+  def update
+    
+  end
+
   private
 
   def entry_params

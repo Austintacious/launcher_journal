@@ -8,7 +8,7 @@
     <%= f.text_field :description %>
   </div>
   <div>
-    <%= select_tag "category[name]", options_for_select(Entry.category_list) %>
+    <%= f.select :categories, Category.all.map {|category| [category.name, category.id] } %>
   </div>
   <%= f.submit %>
 <% end %>
