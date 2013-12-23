@@ -1,0 +1,11 @@
+<h1>Journal Entries</h1>
+
+<ul>
+  <% @entries.each do |entry| %>
+    <li>
+      <%= link_to entry.title, entry %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Add new entry!', new_entry_path %>

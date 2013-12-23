@@ -1,0 +1,14 @@
+<%= form_for @entry do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+  <div>
+    <%= select_tag "entry[category]", options_for_select(Entry.category_list) %>
+  </div>
+  <%= f.submit %>
+<% end %>
