@@ -8,7 +8,7 @@
     <%= f.text_field :description %>
   </div>
   <div>
-    <%= select_tag "entry[category]", options_for_select(Entry.category_list) %>
+    <%= select_tag "category[name]", options_for_select(Entry.category_list) %>
   </div>
   <%= f.submit %>
 <% end %>

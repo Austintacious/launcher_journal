@@ -11,6 +11,10 @@ class EntriesController < ApplicationController
     @entry = Entry.new
   end
 
+  def edit
+    @entry = Entry.find(params[:id])
+  end
+
   def create
     @entry = Entry.new(entry_params)
 
