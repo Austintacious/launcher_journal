@@ -3,6 +3,6 @@ class Entry < ActiveRecord::Base
   has_many :categories, through: :categorizations
 
   def self.category_list
-    ["This", "That", "Another", "Blah"]
+    ["Ruby", "Rails", "HTML", "Javascript", "CSS"]
   end
 end
