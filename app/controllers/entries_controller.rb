@@ -26,7 +26,24 @@ class EntriesController < ApplicationController
   end
 
   def update
-    
+    @entry = Entry.find(params[:id])
+    respond_to do |format|
+      if @entry.update(entry_params)
+        format.html { redirect_to @entry, notice: 'Entry was successfully updated.'}
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @entry.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def destroy
+    @event.destroy
+    respond_to do |format|
+      format.html { redirect_to entries_url }
+      format.json { head :no_content }
+    end
   end
 
   private

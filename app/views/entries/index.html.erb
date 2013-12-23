@@ -1,11 +1,29 @@
 <h1>Journal Entries</h1>
 
-<ul>
-  <% @entries.each do |entry| %>
-    <li>
-      <%= link_to entry.title, entry %>
-    </li>
-  <% end %>
-</ul>
-
+<table border="1">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @entries.each do |entry| %>
+      <tr>  
+        <td>
+          <%= link_to entry.title, entry %>
+        </td>
+        <td>
+          <%= entry.description %>
+        </td>
+        <td>
+          <%= link_to 'X', entry, method: :delete, data: { confirm: 'Are you sure about that?'} %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </ul>
+</table>
+<br>
 <%= link_to 'Add new entry!', new_entry_path %>
